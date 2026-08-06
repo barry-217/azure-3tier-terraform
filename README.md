@@ -1,100 +1,166 @@
-# Azure 3-Tier Infrastructure using Terraform
+# 🚀 Azure 3-Tier Infrastructure using Terraform
 
-## Overview
+> **Milestone 1:** Infrastructure Foundation
 
-This project provisions a production-style Azure infrastructure using Terraform with reusable modules.
+> A production-inspired Azure Infrastructure as Code (IaC) project built using Terraform, following modular design, Git workflows, and DevOps best practices.
 
-The project follows Infrastructure as Code (IaC) principles and demonstrates Azure networking, compute, security, Linux administration, and Terraform best practices.
-
----
-
-## Technologies
-
-- Microsoft Azure
-- Terraform
-- Azure CLI
-- Git
-- GitHub
-- Ubuntu Server 22.04
-- Nginx
-- VS Code
+![Terraform](https://img.shields.io/badge/Terraform-v1.14-blue?logo=terraform)
+![Azure](https://img.shields.io/badge/Microsoft-Azure-0078D4?logo=microsoftazure)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04-E95420?logo=ubuntu)
+![GitHub](https://img.shields.io/badge/GitHub-Actions-black?logo=github)
 
 ---
 
-## Project Structure
+# 📑 Table of Contents
+
+- 📖 Project Overview
+- 🎯 Objectives
+- 📌 Current Status
+- 🛠️ Technologies Used
+- 🏗️ Architecture
+- 📸 Deployment Screenshots
+- 🚀 Project Roadmap
+- 👨‍💻 About Me
+
+---
+
+# 📖 Project Overview
+
+This project demonstrates how to provision a modular Azure infrastructure using **Terraform**.
+
+The objective is to build a production-style Azure environment while following Infrastructure as Code (IaC), Git branching, and DevOps best practices.
+
+This repository is being developed milestone by milestone to simulate a real-world cloud engineering project.
+
+---
+
+# 🎯 Objectives
+
+- Learn Infrastructure as Code using Terraform
+- Build reusable Terraform modules
+- Deploy Azure infrastructure from code
+- Practice Git and GitHub workflows
+- Implement DevOps best practices
+- Build a professional cloud engineering portfolio
+
+---
+
+# 📌 Current Status
+
+**Project Phase:** Milestone 1 Complete ✅
+
+### ✅ Completed
+
+- ✅ Resource Group
+- ✅ Virtual Network
+- ✅ Web Subnet
+- ✅ Network Security Group
+- ✅ Ubuntu Linux Virtual Machine
+- ✅ Public IP Address
+- ✅ SSH Connectivity
+- ✅ Nginx Web Server
+
+### 🔄 Next Milestone
+
+- 🔄 Azure Load Balancer
+
+---
+
+# 🛠️ Technologies Used
+
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| Microsoft Azure | Azure Cloud | Cloud Platform |
+| Terraform | v1.14.x | Infrastructure as Code |
+| Azure CLI | v2.x | Azure Authentication |
+| Git | Latest | Version Control |
+| GitHub | Cloud | Source Code Management |
+| Ubuntu Server | 22.04 LTS | Linux Operating System |
+| Nginx | Latest | Web Server |
+| Visual Studio Code | Latest | Development Environment |
+
+---
+
+# 🏗️ Architecture
+
+The current infrastructure deployed in Azure is shown below:
 
 ```text
-.
-├── modules/
-│   ├── resource-group/
-│   ├── network/
-│   ├── security/
-│   ├── compute/
-│   ├── load-balancer/
-│   ├── storage/
-│   ├── keyvault/
-│   └── monitoring/
-│
-├── docs/
-├── screenshots/
-├── scripts/
-├── .github/
-│   └── workflows/
-│
-├── main.tf
-├── providers.tf
-├── variables.tf
-├── outputs.tf
-└── README.md
+                    Internet
+                        │
+                        ▼
+                Public IP Address
+                        │
+                        ▼
+          Network Security Group (NSG)
+                        │
+                        ▼
+          Ubuntu Linux Virtual Machine
+                        │
+                        ▼
+                  Nginx Web Server
 ```
 
----
+### Azure Resources
 
-## Features Completed
-
-- Resource Group Module
+- Resource Group
 - Virtual Network
-- Web, App and Database Subnets
+- Web Subnet
 - Network Security Group
-- NSG Association
+- Public IP Address
 - Ubuntu Linux Virtual Machine
-- Public IP
-- SSH Connectivity
-- Nginx Installation
+- Nginx Web Server
+
+> **Note:** This architecture represents Milestone 1. Future milestones will introduce a Load Balancer, Storage Account, Key Vault, Monitoring, and CI/CD pipeline.
 
 ---
 
-## Upcoming Features
+# 📸 Deployment Screenshots
 
-- Azure Load Balancer
-- Multiple Web Servers
-- Azure Bastion
-- Azure Key Vault
-- Azure Storage Account
-- Azure Monitor
-- Log Analytics
-- Remote Terraform State
-- GitHub Actions CI/CD
-- Production Architecture Diagram
+The following screenshots demonstrate the successful deployment and validation of the Azure infrastructure.
 
 ---
 
-## Learning Outcomes
+## 1️⃣ Azure Resource Group
 
-This project demonstrates:
+The Resource Group contains all resources provisioned through Terraform for Milestone 1.
 
-- Infrastructure as Code
-- Azure Networking
-- Linux Administration
-- SSH Authentication
-- Terraform Modules
-- Azure Security
-- Git & GitHub Workflow
+![Azure Resource Group](screenshots/01-resource-group.png)
 
 ---
 
-## Author
+## 2️⃣ Ubuntu Linux Virtual Machine
 
-**barry-217**
+Ubuntu Linux virtual machine successfully deployed with a Public IP and running in Azure.
 
-GitHub: https://github.com/barry-217
+![Ubuntu VM](screenshots/02-vm-overview.png)
+
+---
+
+## 3️⃣ Nginx Web Server
+
+Nginx installed and verified by accessing the VM's public IP from a web browser.
+
+![Nginx Web Server](screenshots/03-nginx-homepage.png)
+
+---
+
+## 4️⃣ Terraform Validation
+
+Terraform confirms that the deployed Azure infrastructure matches the configuration with no changes required.
+
+![Terraform Apply](screenshots/04-terraform-apply.png)
+
+---
+
+---
+
+## 👨‍💻 About Me
+
+Hi, I'm **Barath Raj J**.
+
+I'm an IT Infrastructure professional transitioning into Cloud & DevOps Engineering. This repository documents my hands-on journey of building production-inspired Azure infrastructure using Terraform while following modern DevOps practices.
+
+Each milestone represents practical implementation, testing, documentation, and version-controlled delivery.
+
+**GitHub:** https://github.com/barry-217
