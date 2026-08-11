@@ -37,6 +37,8 @@ resource "azurerm_linux_virtual_machine" "this" {
     public_key = file("D:/ProjectPhoenix/keys/id_rsa.pub")
   }
 
+  custom_data = base64encode(file("${path.root}/scripts/install-nginx.sh"))
+
   os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"

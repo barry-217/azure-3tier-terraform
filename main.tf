@@ -27,3 +27,13 @@ module "compute" {
   location            = module.resource_group.location
   subnet_id           = module.network.web_subnet_id
 }
+
+module "load_balancer" {
+  source = "./modules/load-balancer"
+
+  resource_group_name  = module.resource_group.name
+  location             = module.resource_group.location
+  load_balancer_name   = "lb-web-dev"
+  network_interface_id = module.compute.nic_id
+}
+
