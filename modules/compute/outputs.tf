@@ -17,3 +17,8 @@ output "private_ip_address" {
 output "public_ip_address" {
   value = azurerm_public_ip.this.ip_address
 }
+
+output "public_ip_id" {
+  description = "Public IP resource ID"
+  value       = azurerm_public_ip.this.id
+}
