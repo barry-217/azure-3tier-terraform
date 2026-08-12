@@ -26,6 +26,7 @@ module "compute" {
   resource_group_name = module.resource_group.name
   location            = module.resource_group.location
   subnet_id           = module.network.web_subnet_id
+  public_key = file("${path.root}/keys/id_rsa.pub")
 }
 
 module "load_balancer" {

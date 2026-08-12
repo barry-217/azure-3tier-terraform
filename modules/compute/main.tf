@@ -34,7 +34,7 @@ resource "azurerm_linux_virtual_machine" "this" {
 
   admin_ssh_key {
     username   = var.admin_username
-    public_key = file("D:/ProjectPhoenix/keys/id_rsa.pub")
+    public_key = var.public_key
   }
 
   custom_data = base64encode(file("${path.root}/scripts/install-nginx.sh"))
