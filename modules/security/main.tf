@@ -41,6 +41,9 @@ resource "azurerm_network_security_group" "web_nsg" {
 }
 
 resource "azurerm_network_interface_security_group_association" "web" {
-  network_interface_id      = var.network_interface_id
+
+  count = length(var.network_interface_ids)
+
+  network_interface_id      = var.network_interface_ids[count.index]
   network_security_group_id = azurerm_network_security_group.web_nsg.id
-}
+} 

@@ -13,7 +13,7 @@ variable "load_balancer_name" {
   type        = string
 }
 
-variable "network_interface_id" {
-  description = "Network Interface ID of the backend VM"
-  type        = string
+variable "network_interface_ids" {
+  description = "List of Network Interface IDs of the backend VMs"
+  type        = list(string)
 }

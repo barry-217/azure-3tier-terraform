@@ -8,7 +8,8 @@ variable "location" {
   type        = string
 }
 
-variable "network_interface_id" {
-  description = "Network Interface ID"
-  type        = string
+variable "network_interface_ids" {
+  description = "List of Network Interface IDs"
+  type        = list(string)
 }
+

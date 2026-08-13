@@ -9,3 +9,9 @@ variable "location" {
   type        = string
   default     = "Central India"
 }
+
+variable "vm_count" {
+  description = "Number of web virtual machines"
+  type        = number
+  default     = 3
+}
