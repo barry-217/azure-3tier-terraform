@@ -52,7 +52,12 @@ resource "azurerm_lb_rule" "http" {
 } 
 
 resource "azurerm_network_interface_backend_address_pool_association" "this" {
-  network_interface_id    = var.network_interface_id
-  ip_configuration_name   = "internal"
+
+  count = length(var.network_interface_ids)
+
+  network_interface_id = var.network_interface_ids[count.index]
+
+  ip_configuration_name = "internal"
+
   backend_address_pool_id = azurerm_lb_backend_address_pool.this.id
 }

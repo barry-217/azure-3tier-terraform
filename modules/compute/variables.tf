@@ -24,3 +24,13 @@ variable "admin_username" {
   type        = string
   default     = "azureadmin"
 }
+
+variable "public_key" {
+  description = "SSH public key"
+  type        = string
+}
+
+variable "vm_count" {
+  description = "Number of web VMs"
+  type        = number
+}

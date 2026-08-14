@@ -12,3 +12,11 @@ output "resource_group_id" {
   description = "Resource Group ID"
   value       = module.resource_group.id
 }
+
+output "vm_names" {
+  value = module.compute.vm_names
+}
+
+output "private_ip_addresses" {
+  value = module.compute.private_ip_addresses
+}
