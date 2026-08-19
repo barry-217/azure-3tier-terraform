@@ -153,6 +153,22 @@ Terraform confirms that the deployed Azure infrastructure matches the configurat
 
 ---
 
+## CI/CD Pipeline
+
+The project includes a GitHub Actions workflow to automatically validate Terraform code.
+
+### Current pipeline
+
+- ✅ Terraform format check (`terraform fmt -check`)
+- ✅ Terraform initialization (`terraform init`)
+- ✅ Terraform validation (`terraform validate`)
+
+### Planned enhancements
+
+- Azure authentication using GitHub Secrets
+- Terraform plan
+- Deployment approval
+
 ---
 
 ## 👨‍💻 About Me
