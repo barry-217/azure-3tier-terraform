@@ -3,8 +3,8 @@ name: Terraform CI
 on:
   push:
     branches:
-      - feature/github-actions
-
+      - main
+      - feature/**
   pull_request:
     branches:
       - main
