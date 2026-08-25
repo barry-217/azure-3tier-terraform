@@ -32,4 +32,6 @@ jobs:
 
       - name: Terraform Validate
         run: terraform validate
-        
+
+      - name: Show Terraform Files
+        run: ls -la
