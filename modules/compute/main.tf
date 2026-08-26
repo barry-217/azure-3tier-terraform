@@ -1,6 +1,6 @@
 resource "azurerm_network_interface" "this" {
-  count = var.vm_count
-  name = format("%s-%02d-nic", var.vm_name, count.index + 1)
+  count               = var.vm_count
+  name                = format("%s-%02d-nic", var.vm_name, count.index + 1)
   location            = var.location
   resource_group_name = var.resource_group_name
 
@@ -12,8 +12,8 @@ resource "azurerm_network_interface" "this" {
 }
 
 resource "azurerm_linux_virtual_machine" "this" {
-  count = var.vm_count
-  name = format("%s-%02d", var.vm_name, count.index + 1)
+  count               = var.vm_count
+  name                = format("%s-%02d", var.vm_name, count.index + 1)
   resource_group_name = var.resource_group_name
   location            = var.location
   size                = "Standard_B1s"
