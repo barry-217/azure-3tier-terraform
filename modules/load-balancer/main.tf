@@ -34,13 +34,13 @@ resource "azurerm_lb_probe" "http" {
 }
 
 resource "azurerm_lb_rule" "http" {
-  name                           = "http-rule"
-  loadbalancer_id                = azurerm_lb.this.id
+  name            = "http-rule"
+  loadbalancer_id = azurerm_lb.this.id
 
-  protocol                       = "Tcp"
+  protocol = "Tcp"
 
-  frontend_port                  = 80
-  backend_port                   = 80
+  frontend_port = 80
+  backend_port  = 80
 
   frontend_ip_configuration_name = azurerm_lb.this.frontend_ip_configuration[0].name
 
@@ -49,7 +49,7 @@ resource "azurerm_lb_rule" "http" {
   ]
 
   probe_id = azurerm_lb_probe.http.id
-} 
+}
 
 resource "azurerm_network_interface_backend_address_pool_association" "this" {
 

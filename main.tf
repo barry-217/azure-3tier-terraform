@@ -27,7 +27,7 @@ module "compute" {
   resource_group_name = module.resource_group.name
   location            = module.resource_group.location
   subnet_id           = module.network.web_subnet_id
-  public_key          = file("D:/ProjectPhoenix/keys/id_rsa.pub")
+  public_key          = var.public_key
 }
 
 module "load_balancer" {
