@@ -15,3 +15,8 @@ variable "vm_count" {
   type        = number
   default     = 3
 }
+
+variable "public_key" {
+  description = "SSH public key for Azure Linux VMs"
+  type        = string
+}
