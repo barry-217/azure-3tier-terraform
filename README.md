@@ -1,6 +1,8 @@
 # 🚀 Azure 3-Tier Infrastructure using Terraform
 
-> **Milestone 1:** Infrastructure Foundation
+[![Terraform CI](https://github.com/barry-217/azure-3tier-terraform/actions/workflows/terraform-ci.yml/badge.svg)](https://github.com/barry-217/azure-3tier-terraform/actions/workflows/terraform-ci.yml)
+
+> **Milestone 5:** Production Infrastructure & CI/CD
 
 > A production-inspired Azure Infrastructure as Code (IaC) project built using Terraform, following modular design, Git workflows, and DevOps best practices.
 
