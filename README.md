@@ -34,6 +34,19 @@ This repository is being developed milestone by milestone to simulate a real-wor
 
 ---
 
+## ⭐ Project Highlights
+
+- Production-inspired Azure Infrastructure as Code (IaC) project
+- Modular Terraform architecture for reusable infrastructure
+- Remote Terraform state stored securely in Azure Storage
+- Automated infrastructure validation using GitHub Actions
+- Secure Azure authentication using GitHub Service Principal and GitHub Secrets
+- Feature branch development with Pull Request workflow
+- Cloud-init automation for Nginx installation
+- Designed as a portfolio project following DevOps best practices
+
+---
+
 # 🎯 Objectives
 
 - Learn Infrastructure as Code using Terraform
@@ -47,7 +60,7 @@ This repository is being developed milestone by milestone to simulate a real-wor
 
 # 📌 Current Status
 
-**Project Phase:** Milestone 1 Complete ✅
+**Project Phase:** Milestone 5 Complete ✅
 
 ### ✅ Completed
 
@@ -55,14 +68,26 @@ This repository is being developed milestone by milestone to simulate a real-wor
 - ✅ Virtual Network
 - ✅ Web Subnet
 - ✅ Network Security Group
-- ✅ Ubuntu Linux Virtual Machine
-- ✅ Public IP Address
-- ✅ SSH Connectivity
-- ✅ Nginx Web Server
+- ✅ Ubuntu Linux Virtual Machines
+- ✅ Azure Load Balancer
+- ✅ Nginx Installation using Cloud-Init
+- ✅ Modular Terraform Architecture
+- ✅ Remote Terraform State (Azure Storage)
+- ✅ Git Feature Branch Workflow
+- ✅ GitHub Pull Requests
+- ✅ GitHub Actions CI Pipeline
+- ✅ Terraform Format Validation
+- ✅ Terraform Initialization
+- ✅ Terraform Validation
+- ✅ Secure Azure Authentication using GitHub Secrets
 
-### 🔄 Next Milestone
+### 🚀 Next Milestone
 
-- 🔄 Azure Load Balancer
+- Docker
+- Azure Container Registry (ACR)
+- Azure Kubernetes Service (AKS)
+- Helm
+- Monitoring
 
 ---
 
@@ -86,19 +111,28 @@ This repository is being developed milestone by milestone to simulate a real-wor
 The current infrastructure deployed in Azure is shown below:
 
 ```text
-                    Internet
-                        │
-                        ▼
-                Public IP Address
-                        │
-                        ▼
-          Network Security Group (NSG)
-                        │
-                        ▼
-          Ubuntu Linux Virtual Machine
-                        │
-                        ▼
-                  Nginx Web Server
+                        Internet
+                            │
+                            ▼
+                   Azure Load Balancer
+                            │
+             ┌──────────────┴──────────────┐
+             ▼                             ▼
+        Ubuntu VM-01                  Ubuntu VM-02
+             │                             │
+             └──────────────┬──────────────┘
+                            ▼
+                     Virtual Network
+                            │
+                      Network Security Group
+                            │
+                     Resource Group
+                            │
+                  Terraform Infrastructure
+                            │
+                      GitHub Actions CI
+                            │
+                 Terraform fmt → init → validate
 ```
 
 ### Azure Resources
@@ -165,18 +199,54 @@ The project includes a GitHub Actions workflow to automatically validate Terrafo
 
 ### Planned enhancements
 
-- Azure authentication using GitHub Secrets
 - Terraform plan
 - Deployment approval
 
+### CI/CD Status
+
+The GitHub Actions pipeline automatically runs on every push and pull request to the `main` branch.
+
+**Pipeline stages:**
+
+- ✅ Terraform Format Check
+- ✅ Terraform Initialization
+- ✅ Terraform Validation
+- ✅ Azure Authentication using GitHub Secrets
+
+This ensures Infrastructure as Code (IaC) changes are validated before being merged into the main branch.
+
 ---
 
-## 👨‍💻 About Me
+# 💡 Skills Demonstrated
+
+- Infrastructure as Code (Terraform)
+- Azure Infrastructure Provisioning
+- Terraform Modules
+- Remote State Management
+- Azure Virtual Networking
+- Network Security Groups (NSG)
+- Azure Load Balancer
+- Linux Administration
+- Cloud-Init Automation
+- Git & GitHub Workflow
+- Feature Branch Development
+- Pull Requests & Code Reviews
+- GitHub Actions CI/CD
+- Azure Service Principal Authentication
+- GitHub Secrets Management
+- Infrastructure Validation using Terraform
+
+---
+
+# 👨‍💻 About Me
 
 Hi, I'm **Barath Raj J**.
 
-I'm an IT Infrastructure professional transitioning into Cloud & DevOps Engineering. This repository documents my hands-on journey of building production-inspired Azure infrastructure using Terraform while following modern DevOps practices.
+I'm an IT Infrastructure professional transitioning into **Cloud & DevOps Engineering**, with hands-on experience in Azure, Terraform, Git, GitHub Actions, Windows Server, and IT Operations.
 
-Each milestone represents practical implementation, testing, documentation, and version-controlled delivery.
+This repository is part of my practical learning journey, where I build production-inspired projects to strengthen my Infrastructure as Code (IaC), cloud automation, and CI/CD skills.
 
-**GitHub:** https://github.com/barry-217
+### Connect with me
+
+- **GitHub:** https://github.com/barry-217
+- **LinkedIn:** *(We'll add your LinkedIn profile in the next phase.)*
